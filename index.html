@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Game Management Store - Registration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-cover bg-center min-h-screen flex items-center justify-center" style="background-image: url('1.jpg');">
+    <div class="bg-white bg-opacity-90 p-6 rounded-lg shadow-lg w-96">
+        <h2 class="text-2xl font-bold text-center mb-6">User Registration</h2>
+        <form id="registrationForm">
+            <div class="mb-4 relative">
+                <label for="name" class="block text-gray-700 font-semibold mb-2">Full Name</label>
+                <input type="text" id="name" name="name" required class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                <div class="absolute top-0 left-full ml-2 bg-gray-700 text-white text-sm py-1 px-3 rounded hidden group-hover:block">Please enter a valid name (at least 3 alphabetic characters).</div>
+                <div class="text-red-500 text-sm mt-2 hidden" id="nameError">Invalid name.</div>
+                <div class="text-green-500 text-sm mt-2 hidden" id="nameValid">Looks good!</div>
+            </div>
+
+            <div class="mb-4 relative">
+                <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+                <input type="email" id="email" name="email" required class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                <div class="absolute top-0 left-full ml-2 bg-gray-700 text-white text-sm py-1 px-3 rounded hidden group-hover:block">Please enter a valid email address (e.g., user@example.com).</div>
+                <div class="text-red-500 text-sm mt-2 hidden" id="emailError">Invalid email.</div>
+                <div class="text-green-500 text-sm mt-2 hidden" id="emailValid">Valid email!</div>
+            </div>
+
+            <div class="mb-4 relative">
+                <label for="password" class="block text-gray-700 font-semibold mb-2">Password</label>
+                <input type="password" id="password" name="password" required class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                <div class="absolute top-0 left-full ml-2 bg-gray-700 text-white text-sm py-1 px-3 rounded hidden group-hover:block">Password must be at least 8 characters long and contain both letters and numbers.</div>
+                <div class="text-red-500 text-sm mt-2 hidden" id="passwordError">Invalid password.</div>
+            </div>
+
+            <div class="mb-4 relative">
+                <label for="confirmPassword" class="block text-gray-700 font-semibold mb-2">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                <div class="absolute top-0 left-full ml-2 bg-gray-700 text-white text-sm py-1 px-3 rounded hidden group-hover:block">Passwords must match.</div>
+                <div class="text-red-500 text-sm mt-2 hidden" id="confirmPasswordError">Passwords do not match.</div>
+                <div class="text-green-500 text-sm mt-2 hidden" id="passwordMatchValid">Passwords match!</div>
+            </div>
+
+            <div class="mb-6 relative">
+                <label for="dob" class="block text-gray-700 font-semibold mb-2">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
+                <div class="absolute top-0 left-full ml-2 bg-gray-700 text-white text-sm py-1 px-3 rounded hidden group-hover:block">You must be at least 18 years old.</div>
+                <div class="text-red-500 text-sm mt-2 hidden" id="dobError">You must be at least 18 years old.</div>
+            </div>
+
+            <button type="submit" class="w-full bg-green-500 text-white p-3 rounded-lg hover:bg-green-600 disabled:bg-gray-400 disabled:cursor-not-allowed" id="submitBtn" disabled>Register</button>
+        </form>
+    </div>
+
+    <script src="registration.js"></script>
+</body>
+</html>
